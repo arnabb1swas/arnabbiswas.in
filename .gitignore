@@ -1,2 +1,6 @@
-.claude/
+node_modules/
+dist/
+.astro/
+.playwright-mcp/
+live-site.png
 .DS_Store

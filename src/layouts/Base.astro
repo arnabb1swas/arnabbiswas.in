@@ -1,0 +1,54 @@
+---
+import "../styles/global.css";
+import Nav from "../components/react/Nav.jsx";
+import Spotlight from "../components/react/Spotlight.jsx";
+import { nav } from "../data/site.js";
+
+const {
+  title = "Arnab Biswas — Software Engineer",
+  description = "Arnab Biswas — Software Engineer. Building reliable, scalable systems and APIs.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Arnab Biswas" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arnabbiswas.in" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%9A%A1</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="relative min-h-screen">
+    <!-- backdrop layers -->
+    <div class="pointer-events-none fixed inset-0 -z-10 bg-grid"></div>
+    <div
+      class="pointer-events-none fixed inset-0 -z-10"
+      style="background:
+        radial-gradient(600px circle at 15% 0%, rgba(34,211,238,0.08), transparent 55%),
+        radial-gradient(700px circle at 85% 20%, rgba(167,139,250,0.06), transparent 55%);"
+    >
+    </div>
+    <Spotlight client:idle />
+
+    <Nav links={nav} client:load />
+
+    <main class="relative z-10">
+      <slot />
+    </main>
+  </body>
+</html>
