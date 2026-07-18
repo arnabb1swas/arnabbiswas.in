@@ -4,3 +4,4 @@ dist/
 .playwright-mcp/
 live-site.png
 .DS_Store
+CLAUDE.md
