@@ -38,8 +38,9 @@ export const projects = [
   {
     num: "02",
     name: "FShare",
-    desc: "A file-sharing service — upload any file, get a shareable link (also deliverable by email). Links auto-expire and purge from the database 24 hours after upload.",
-    stack: ["Node.js", "Express", "MongoDB"],
+    desc: "A full-stack file-sharing service — upload any file, get a clean expiring link (or have it emailed). Files stream to Backblaze B2, metadata lives in Postgres, and an hourly job purges expired links and their objects. React front end over an Express API.",
+    stack: ["React", "Express", "PostgreSQL", "Backblaze B2"],
+    live: "https://fshare-8kxi.onrender.com",
     source: "https://github.com/arnabb1swas/FShare",
   },
   {
