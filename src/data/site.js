@@ -60,8 +60,9 @@ export const projects = [
   {
     num: "05",
     name: "Task Manager — GraphQL",
-    desc: "A task-management API built on GraphQL with Apollo Server — a typed schema, resolvers, and full CRUD over tasks. A clean take on schema-first API design.",
-    stack: ["Node.js", "GraphQL", "Apollo Server"],
+    desc: "A full-stack task manager — a schema-first GraphQL API (Apollo Server v5 over Postgres via Knex) behind a polished React SPA. JWT auth with USER/ADMIN roles, a drag-and-drop Kanban board with optimistic UI, nested sub-tasks, debounced search with cursor pagination, and an admin user directory.",
+    stack: ["React", "GraphQL", "Apollo", "PostgreSQL"],
+    live: "https://task-manager-web-ygmg.onrender.com/login",
     source: "https://github.com/arnabb1swas/Task-Manager-GraphQL",
   },
 ];
